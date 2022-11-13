@@ -1,3 +1,4 @@
+
 // TODO: на чистом css не стал реализовывать так как код будет слишком большим
 /* 
   функция генератор колонок
@@ -12,6 +13,7 @@
   @padding - внутренние отсупы
   @i - итерируемый элемент(кастомная реализация loop в less посредством рекурсии)
 */
+@import "C:/Users/1/Desktop/front/src/utils/media.less";
 .generate-columns(@infix, @n, @padding, @i: 1) when (@i =< @n) {
   .generate-columns(@infix, @n, @padding, (@i + 1));
 
@@ -20,6 +22,8 @@
     padding-left: @padding;
     padding-right: @padding;
     box-sizing: border-box;
+    margin-bottom: 24px;
+
   }
 
   & when (@infix) {
@@ -30,6 +34,7 @@
       padding-left: @padding;
       padding-right: @padding;
       box-sizing: border-box;
+      margin-bottom: 24px;
     }
   }
 }
