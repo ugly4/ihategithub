@@ -1,4 +1,3 @@
-@import "./animation.less";
 .button {
   display: flex;
   align-items: center;
@@ -12,11 +11,10 @@
   outline: inherit;
   background-color: var(--primary);
   border-radius: var(--radius-s);
-  &:hover{
-    background-color: var(--primary-hover);
-  }
-  &:active{
-    background-color: var(--primary-active);
-  }
-  
+}
+.button:hover {
+  background-color: var(--primary-hover);
+}
+.button:active {
+  background-color: var(--primary-active);
 }
